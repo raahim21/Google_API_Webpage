@@ -204,13 +204,13 @@ function populate(book) {
      btn.addEventListener('click', (e)=>{
         e.preventDefault()
         if (sessionStorage.getItem('page')=='fav') {
-            let redirect_url = `http://127.0.0.1:5500/rest-countries-api-with-color-theme-switcher-master/favorite.html`
+            let redirect_url = `favorite.html`
             sessionStorage.removeItem('page')
             window.location.href = redirect_url
         }
         else{
         let text = sessionStorage.getItem('q')
-        let redirect_url = `http://127.0.0.1:5500/rest-countries-api-with-color-theme-switcher-master/storage.html?q=${text}`
+        let redirect_url = `storage.html?q=${text}`
         window.location.href = redirect_url
         }
      })
